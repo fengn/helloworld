@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, reorderArray, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, reorderArray, ToastController } from 'ionic-angular';
 import { TodoProvider } from "../../providers/todo/todo";
 import { ArchivedTodosPage } from "../archived-todos/archived-todos";
 
+
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
