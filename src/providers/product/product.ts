@@ -6,6 +6,10 @@ import { Injectable } from '@angular/core';
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
+
+const API:string = "https://orangevalleycaa.org/api/music";
+const LocalData: string = "/assets/data.json";
+
 @Injectable()
 export class ProductProvider {
 
@@ -14,7 +18,7 @@ export class ProductProvider {
   }
 
   getProducts(){
-  	return this.http.get("/assets/data.json");
+  	return this.http.get(LocalData);
   }
 
 }

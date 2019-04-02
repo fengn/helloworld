@@ -15,10 +15,10 @@
  
 <ion-content padding>
   <ion-card *ngFor="let product of products">
-  <!-- <img [src]="product.image"> -->
-  <ion-card-header>
+  <img [src]="product.image">
+<!--   <ion-card-header>
    {{product.name}}
-  </ion-card-header>
+  </ion-card-header> -->
     <ion-card-content>
       <ion-card-title>{{product.name}}</ion-card-title>
       <p>{{product.description}}</p>

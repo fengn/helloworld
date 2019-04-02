@@ -16,5 +16,9 @@
 </ion-header>
  
 <ion-content padding>
-  This is my tab2 content!
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let product of bestSellerProducts">
+      <img [src]="product.image" />
+    </ion-slide>
+  </ion-slides>
 </ion-content>
