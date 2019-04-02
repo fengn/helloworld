@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArchivedTodosPage } from "../pages/archived-todos/archived-todos";
 
 import { LoginPage } from '../pages/login/login';
+import { ProductProvider } from '../providers/product/product';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LoginPage } from '../pages/login/login';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TodoProvider
+    TodoProvider,
+    ProductProvider
   ]
 })
 export class AppModule {}

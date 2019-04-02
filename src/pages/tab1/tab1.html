@@ -14,5 +14,14 @@
 </ion-header>
  
 <ion-content padding>
-  This is my tab1 content!
+  <ion-card *ngFor="let product of products">
+  <!-- <img [src]="product.image"> -->
+  <ion-card-header>
+   {{product.name}}
+  </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>{{product.name}}</ion-card-title>
+      <p>{{product.description}}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
