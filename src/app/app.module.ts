@@ -13,11 +13,14 @@ import { ArchivedTodosPage } from "../pages/archived-todos/archived-todos";
 import { LoginPage } from '../pages/login/login';
 import { ProductProvider } from '../providers/product/product';
 
+import { Screen4Page } from '../pages/screen4/screen4';
+
 @NgModule({
   declarations: [
     MyApp,
     //HomePage,
     LoginPage,
+    Screen4Page,
     ArchivedTodosPage
   ],
   imports: [
@@ -30,6 +33,7 @@ import { ProductProvider } from '../providers/product/product';
     MyApp,
     //HomePage,
     LoginPage,
+    Screen4Page,
     ArchivedTodosPage
   ],
   providers: [
