@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Screen4Page } from '../screen4/screen4';
+import { Screen9Page } from '../screen9/screen9';
 /**
  * Generated class for the SpecialPage page.
  *
@@ -22,8 +23,12 @@ export class SpecialPage {
     console.log('ionViewDidLoad SpecialPage');
   }
 
-  openScreen(){
+  openScreen4(){
   	this.navCtrl.push(Screen4Page);
+  }
+
+  openScreen9(){
+    this.navCtrl.push(Screen9Page);
   }
 
 }

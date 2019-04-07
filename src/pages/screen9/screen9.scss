@@ -1,0 +1,62 @@
+page-screen9 {
+// screen 9
+  .screen-9 {
+      .slide_1,
+      .slide_2,
+      .slide_3,
+      .slide_4 {
+          background-size: cover;
+          transition: all 0.5s ease-in;
+          .button {
+              width: 200px;
+              margin: 0 auto;
+              margin-top: 50px;
+              z-index: 99;
+          }
+          img {
+              height: 150px !important;
+              position: absolute;
+              top: 20px;
+              left: 50%;
+              transform: translateX(-50%);
+          }
+      }
+      .slide_1 {
+          background-image: url('../assets/imgs/screen_9_1.jpg');
+      }
+      .slide_2 {
+          background-image: url('../assets/imgs/screen_9_2.jpg');
+      }
+      .slide_3 {
+          background-image: url('../assets/imgs/screen_9_3.jpg');
+      }
+      .slide_4 {
+          background-image: url('../assets/imgs/screen_9_4.jpg');
+      }
+      h2 {
+          margin-top: 20px;
+      }
+      img {
+          margin-top: 70px;
+          margin-bottom: 70px;
+      }
+      ion-slide {
+          height: 100vh;
+      }
+      .slide-content {
+          position: absolute;
+          bottom: 90px;
+          width: 100%;
+      }
+      .swiper-pagination {
+          top: 50%;
+          .swiper-pagination-bullet-active{
+              background: #000;
+          }
+      }
+      .footer-content {
+          bottom: 10px;
+          z-index: 999;
+      }
+  }
+}
