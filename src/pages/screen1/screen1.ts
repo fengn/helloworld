@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the Screen1Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,20 +10,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-screen1',
+  templateUrl: 'screen1.html',
 })
-export class LoginPage {
+export class Screen1Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    console.log('ionViewDidLoad Screen1Page');
   }
 
-  doLogin() {
-    this.navCtrl.setRoot('MenuPage');
+  goBack(){
+    this.navCtrl.pop();
+    //this.navCtrl.setRoot('MenuPage');
   }
 
 }

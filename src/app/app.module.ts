@@ -15,6 +15,7 @@ import { ProductProvider } from '../providers/product/product';
 
 import { Screen4Page } from '../pages/screen4/screen4';
 import { Screen9Page } from '../pages/screen9/screen9';
+import { Screen1Page } from '../pages/screen1/screen1';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { Screen9Page } from '../pages/screen9/screen9';
     LoginPage,
     Screen4Page,
     Screen9Page,
+    Screen1Page,
     ArchivedTodosPage
   ],
   imports: [
@@ -37,6 +39,7 @@ import { Screen9Page } from '../pages/screen9/screen9';
     LoginPage,
     Screen4Page,
     Screen9Page,
+    Screen1Page,
     ArchivedTodosPage
   ],
   providers: [
