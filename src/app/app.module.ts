@@ -16,6 +16,7 @@ import { ProductProvider } from '../providers/product/product';
 import { Screen4Page } from '../pages/screen4/screen4';
 import { Screen9Page } from '../pages/screen9/screen9';
 import { Screen1Page } from '../pages/screen1/screen1';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { Screen1Page } from '../pages/screen1/screen1';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     TodoProvider,
-    ProductProvider
+    ProductProvider,
+    AuthServiceProvider
   ]
 })
 export class AppModule {}
