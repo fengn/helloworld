@@ -29,7 +29,7 @@ export class LoginPage {
   //   this.navCtrl.setRoot('MenuPage');
   // }
 
-  public createAccount() {
+  createAccount() {
     this.navCtrl.push('RegisterPage');
   }
 

@@ -10,10 +10,17 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>tab1</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
  
 <ion-content padding>
+  <h3>Welcome inside, {{username}}!</h3>
+  Your Email is: {{email}}
   <ion-card *ngFor="let product of products">
   <img [src]="product.image">
 <!--   <ion-card-header>

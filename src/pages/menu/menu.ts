@@ -6,7 +6,7 @@ import { Tab2Page } from '../tab2/tab2';
 import { TabsPage } from '../tabs/tabs';
 import { HomePage } from '../home/home';
 import { SpecialPage } from '../special/special'
-
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 /**
  * Generated class for the MenuPage page.
  *
@@ -38,7 +38,7 @@ export class MenuPage {
     { title: 'Special', pageName: 'SpecialPage', icon: 'shuffle' },
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthServiceProvider) {
   }
 
   ionViewDidLoad() {

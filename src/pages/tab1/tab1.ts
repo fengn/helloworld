@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProductProvider } from '../../providers/product/product';
+import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
+import { MyApp } from '../../app/app.component';
 /**
  * Generated class for the Tab1Page page.
  *
@@ -24,7 +26,12 @@ import { ProductProvider } from '../../providers/product/product';
 export class Tab1Page {
 
   public products = [];
-  constructor(private productProvider: ProductProvider, public navCtrl: NavController, public navParams: NavParams) {
+  username = '';
+  email = '';
+  constructor(private productProvider: ProductProvider, public navCtrl: NavController, public navParams: NavParams, private auth: AuthServiceProvider, public myApp: MyApp) {
+    let info = this.auth.getUserInfo();
+    this.username = info['name'];
+    this.email = info['email'];
   }
 
   ionViewDidLoad() {
@@ -34,6 +41,12 @@ export class Tab1Page {
       	this.products = products as any;
         console.log(this.products)
       });
+  }
+  public logout() {
+    this.auth.logout().subscribe(succ => {
+      //this.navCtrl.popToRoot()
+        this.myApp.logout()
+    });
   }
 
 }

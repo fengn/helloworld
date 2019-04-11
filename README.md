@@ -4,3 +4,4 @@
 3. add Screen-1&-4 using onboarding-ionic3.
 4. add Screen-9 using onboarding-ionic3.
 5. modified loginPage
+6. add registerPage and done the front end.

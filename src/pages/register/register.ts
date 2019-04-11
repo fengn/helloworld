@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, NavParams } from 'ionic-angular';
+import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
 
 /**
  * Generated class for the RegisterPage page.
@@ -14,12 +15,44 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  createSuccess = false;
+  registerCredentials = { email: '', password: '' };
+  constructor(private auth: AuthServiceProvider, public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
+  }
+
+  public register() {
+    this.auth.register(this.registerCredentials).subscribe(success => {
+      if (success) {
+        this.createSuccess = true;
+        this.showPopup("Success", "Account created.");
+      } else {
+        this.showPopup("Error", "Problem creating account.");
+      }
+    },
+      error => {
+        this.showPopup("Error", error);
+      });
+  }
+  showPopup(title, text) {
+    let alert = this.alertCtrl.create({
+      title: title,
+      subTitle: text,
+      buttons: [
+        {
+          text: 'OK',
+          handler: data => {
+            if (this.createSuccess) {
+              this.navCtrl.popToRoot();
+            }
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }
