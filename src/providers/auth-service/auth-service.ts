@@ -2,6 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+//import { Observable } from 'rxjs-compat';
+//import { map } from 'rxjs/operators';
+import { AngularFireDatabase } from '@angular/fire/database';
 /*
   Generated class for the AuthServiceProvider provider.
 
@@ -21,9 +24,18 @@ export class User {
 @Injectable()
 export class AuthServiceProvider {
   currentUser: User;
-
-  constructor(public http: HttpClient) {
+  //items: Observable<any[]>;
+  constructor(public http: HttpClient, afDB: AngularFireDatabase) {
     console.log('Hello AuthServiceProvider Provider');
+    //this.items = afDB.list('users');
+    
+    afDB.list('/users').valueChanges().subscribe((datas) => { 
+      console.log("datas", datas)
+    },(err)=>{
+       console.log("probleme : ", err)
+    });
+    //"rxjs-compat": "^6.4.0",
+    //"rxjs": "^6.4.0",
   }
 
   public login(credentials) {

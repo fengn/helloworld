@@ -5,3 +5,4 @@
 4. add Screen-9 using onboarding-ionic3.
 5. modified loginPage
 6. add registerPage and done the front end.
+7. sloved rxjs version problems and test firebase contact.

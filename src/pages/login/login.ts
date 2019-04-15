@@ -15,6 +15,7 @@ import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  items: any;
   loading: Loading;
   registerCredentials = { email: '', password: '' };
 
@@ -28,7 +29,7 @@ export class LoginPage {
   // doLogin() {
   //   this.navCtrl.setRoot('MenuPage');
   // }
-
+  
   createAccount() {
     this.navCtrl.push('RegisterPage');
   }
